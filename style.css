@@ -1,0 +1,10 @@
+/* ============================
+   Campus Connect Card animation
+   ============================ */
+.why-card {
+    background: rgba(251, 244, 228, 0.04);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 30px 26px;
+    transition: transform 0.22s ease, border-color 0.22s, background 0.22s;
+}
