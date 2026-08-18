@@ -1,10 +1,47 @@
 /* ============================
    Campus Connect Card animation
    ============================ */
-.why-card {
-    background: rgba(251, 244, 228, 0.04);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 30px 26px;
-    transition: transform 0.22s ease, border-color 0.22s, background 0.22s;
+/* ==== Why Attend card hover treatment ==== */
+.wpcc-why-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.wpcc-why-card{
+  background: #fff;
+  border: 1px solid rgba(20,20,40,0.10);
+  border-radius: 16px;
+  padding: 30px 26px;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.wpcc-why-card:hover{
+  transform: translateY(-6px);
+  border-color: #3858E9;
+  box-shadow: 0 14px 30px rgba(20,20,40,0.08);
+}
+
+.wpcc-why-card h2,
+.wpcc-why-card h3{
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.wpcc-why-card p{
+  color: #55596b;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 900px){
+  .wpcc-why-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px){
+  .wpcc-why-grid{ grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce){
+  .wpcc-why-card{ transition: none; }
 }
