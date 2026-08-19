@@ -131,7 +131,31 @@
   .wpcc-hero .wp-block-cover__image-background,
   .wpcc-hero .wpcc-hero-mascot{ animation: none; }
 }
-
+.wpcc-hero .wpcc-hero-mascot{
+  position: absolute;
+  z-index: 2;
+  right: 6%;
+  bottom: -18px;
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35));
+  animation: wpcc-bob 3.2s ease-in-out infinite;
+}
+.wpcc-hero .wpcc-hero-mascot img{ width: 100%; height: auto; display: block; }
+ 
+@keyframes wpcc-bob{
+  0%, 100%{ transform: translateY(0) rotate(-3deg); }
+  50%{ transform: translateY(-14px) rotate(2deg); }
+}
+ 
+@media (max-width: 900px){
+  .wpcc-hero .wpcc-hero-mascot{ display: none; }
+}
+@media (prefers-reduced-motion: reduce){
+  .wpcc-hero .wp-block-cover__image-background,
+  .wpcc-hero .wpcc-hero-mascot{ animation: none; }
+}
+ 
 
 /* ============================
         HOME PAGE END
