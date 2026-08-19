@@ -45,3 +45,94 @@
 @media (prefers-reduced-motion: reduce){
   .wpcc-why-card{ transition: none; }
 }
+
+
+/* ============================
+ HOME PAGE 
+   ============================ */
+
+
+
+/* ==== WPCC Hero — native block version ==== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --wpcc-navy: #2222a8;
+  --wpcc-navy-deep: #171777;
+  --wpcc-teal: #1983a7;
+}
+
+/* Ken Burns zoom on the Cover block's own background image */
+.wpcc-hero .wp-block-cover__image-background{
+  animation: wpcc-kenburns 22s ease-in-out infinite alternate;
+}
+@keyframes wpcc-kenburns{
+  from{ transform: scale(1) translate(0,0); }
+  to{ transform: scale(1.12) translate(-1.5%,-1%); }
+}
+
+/* Text column inside the Cover */
+.wpcc-hero-inner{
+  max-width: 760px;
+}
+
+.wpcc-eyebrow{
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #8fd6ea !important;
+  display: flex; align-items: center; gap: 8px;
+}
+.wpcc-eyebrow::before{ content: ""; width: 26px; height: 2px; background: #8fd6ea; display: inline-block; }
+
+.wpcc-hero-title{
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 800 !important;
+  font-size: clamp(2.1rem, 4.6vw, 3.4rem) !important;
+  line-height: 1.15 !important;
+  color: #ffffff !important;
+}
+
+.wpcc-hero-lede{
+  font-family: 'Inter', sans-serif;
+  font-size: 1.06rem !important;
+  color: rgba(255,255,255,0.85) !important;
+  max-width: 600px; line-height: 1.7;
+}
+
+.wpcc-laurel-divider{
+  font-family: 'Inter', sans-serif;
+  color: rgba(255,255,255,0.7) !important;
+  font-size: 0.86rem !important;
+  margin-top: 10px;
+}
+
+/* Floating mascot image, positioned relative to the Cover block */
+.wpcc-hero .wpcc-hero-mascot{
+  position: absolute;
+  z-index: 2;
+  right: 6%;
+  bottom: -18px;
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35));
+  animation: wpcc-bob 3.2s ease-in-out infinite;
+}
+.wpcc-hero .wpcc-hero-mascot img{ width: 100%; height: auto; display: block; }
+
+@keyframes wpcc-bob{
+  0%, 100%{ transform: translateY(0) rotate(-3deg); }
+  50%{ transform: translateY(-14px) rotate(2deg); }
+}
+
+@media (max-width: 900px){
+  .wpcc-hero .wpcc-hero-mascot{ display: none; }
+}
+@media (prefers-reduced-motion: reduce){
+  .wpcc-hero .wp-block-cover__image-background,
+  .wpcc-hero .wpcc-hero-mascot{ animation: none; }
+}
+
+
+/* ============================
+        HOME PAGE END
+   ============================ */
