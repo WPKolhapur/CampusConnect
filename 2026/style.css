@@ -132,10 +132,7 @@
   .wpcc-hero .wpcc-hero-mascot{ animation: none; }
 }
 .wpcc-hero .wpcc-hero-mascot{
-  position: absolute;
   z-index: 2;
-  right: 6%;
-  bottom: -18px;
   width: 150px;
   height: auto;
   filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35));
