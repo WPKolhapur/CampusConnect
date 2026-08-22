@@ -231,6 +231,83 @@
   flex-shrink: 0;
   font-weight: 600;
 }
+
+/* ==== WPCC Gallery Section — native block version ==== */
+
+.wpcc-gallery-grid{
+  gap: 18px !important;
+  margin-top: 10px;
+}
+
+.wpcc-gallery-item{
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid rgba(34,34,168,0.12);
+  overflow: hidden !important;
+}
+
+/* zoom the photo on hover */
+.wpcc-gallery-item .wp-block-cover__image-background{
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.wpcc-gallery-item:hover .wp-block-cover__image-background{
+  transform: scale(1.08);
+  filter: saturate(1.15);
+}
+
+/* dark gradient that appears on hover, drawn entirely by CSS
+   since the block's own Overlay is set to 0% */
+.wpcc-gallery-item::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(0deg, rgba(23,23,119,0.85) 0%, rgba(23,23,119,0) 45%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.wpcc-gallery-item:hover::after{
+  opacity: 1;
+}
+
+.wpcc-gallery-cap{
+  position: relative;
+  z-index: 2;
+  color: #ffffff !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem !important;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  margin: 0 !important;
+}
+.wpcc-gallery-item:hover .wpcc-gallery-cap{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 782px){
+  .wpcc-gallery-grid{
+    flex-wrap: wrap !important;
+  }
+  .wpcc-gallery-item{
+    flex-basis: 100% !important;
+  }
+  /* show captions permanently on touch devices, since hover doesn't apply */
+  .wpcc-gallery-item::after,
+  .wpcc-gallery-item .wpcc-gallery-cap{
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .wpcc-gallery-item .wp-block-cover__image-background{
+    transition: none;
+  }
+}
  
 
 /* ============================
