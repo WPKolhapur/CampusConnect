@@ -138,6 +138,79 @@
   .wpcc-hero .wp-block-cover__image-background,
   .wpcc-hero .wpcc-hero-mascot{ animation: none; }
 }
+
+/* ==========COUNTER==================*/
+/* ==== WPCC Stat Counter Bar — native block version ==== */
+
+.wpcc-statbar{
+  background: #ffffff;
+  border-top: 1px solid rgba(34,34,168,0.12);
+  border-bottom: 1px solid rgba(34,34,168,0.12);
+  padding: 30px 24px !important;
+}
+
+.wpcc-stat-label-top{
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem !important;
+  font-weight: 600;
+  color: #4a4a68 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin-bottom: 18px !important;
+}
+
+.wpcc-statgrid{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wpcc-stat-item{
+  text-align: center;
+  transition: transform 0.25s ease;
+}
+.wpcc-stat-item:hover{
+  transform: translateY(-4px);
+}
+
+/* vertical divider between columns, skip the first */
+.wpcc-statgrid > .wpcc-stat-item:not(:first-child){
+  border-left: 1px solid rgba(34,34,168,0.12);
+}
+
+.wpcc-statnum{
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 800 !important;
+  font-size: 2.1rem !important;
+  color: #2222a8 !important;
+  margin: 0 0 4px 0 !important;
+  line-height: 1 !important;
+}
+
+.wpcc-statlabel{
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem !important;
+  color: #4a4a68 !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 782px){
+  .wpcc-statgrid{
+    flex-wrap: wrap !important;
+  }
+  .wpcc-statgrid > .wpcc-stat-item{
+    flex-basis: 50% !important;
+    margin-bottom: 20px;
+  }
+  .wpcc-statgrid > .wpcc-stat-item:nth-child(odd){
+    border-left: none !important;
+  }
+  .wpcc-statgrid > .wpcc-stat-item:nth-child(-n+2){
+    border-bottom: 1px solid rgba(34,34,168,0.12);
+    padding-bottom: 16px;
+  }
+}
+/* ==========COUNTER END==================*/
  
 
 /* ============================
