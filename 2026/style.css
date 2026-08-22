@@ -211,6 +211,26 @@
   }
 }
 /* ==========COUNTER END==================*/
+
+.wpcc-about-row{
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(34,34,168,0.12);
+  font-size: 0.94rem !important;
+  color: #4a4a68 !important;
+  margin: 0 !important;
+}
+.wpcc-about-row:last-child{
+  border-bottom: none;
+}
+.wpcc-about-row strong{
+  color: #171777;
+  min-width: 96px;
+  flex-shrink: 0;
+  font-weight: 600;
+}
  
 
 /* ============================
