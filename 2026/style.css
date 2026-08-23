@@ -365,7 +365,38 @@
     transition: none;
   }
 }
+
+
+    /*----------SPONSOR TICKETS-----------------*/
+    .wpcc-ticket{
+  position: relative;
+  background: #ffffff;
+  color: #171777;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(23,23,119,0.14);
+  transition: transform 0.28s ease;
+  padding: 0 !important;
+}
+.wpcc-ticket:hover{
+  transform: translateY(-8px) rotate(-1deg);
+}
+
+
+.wpcc-ticket-perf::before,
+.wpcc-ticket-perf::after{
+  content: "";
+  position: absolute;
+  top: -11px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--wpcc-page-bg);
+}
+.wpcc-ticket-perf::before{ left: -33px; }
+.wpcc-ticket-perf::after{ right: -33px; }
  
+        /*----------SPONSOR TICKETS End----------------*/
 
 /* ============================
         HOME PAGE END
