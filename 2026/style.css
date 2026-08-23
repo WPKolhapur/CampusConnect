@@ -1,3 +1,17 @@
+/* Global content width seted 1440 - exclude hero/banner */
+.entry-content > *:not(.wpcc-hero) {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Keep hero/banner full width */
+.entry-content > .wpcc-hero {
+    width: 100%;
+    max-width: none;
+}
+
 /* ============================
    Campus Connect Card animation
    ============================ */
