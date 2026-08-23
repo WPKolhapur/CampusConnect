@@ -384,7 +384,7 @@
   background: #fdf8ec;
   border-radius: 16px;
   box-shadow: 0 10px 26px rgba(23,23,119,0.10);
-  padding: 34px 40px !important;
+  padding: 30px 28px !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -420,7 +420,8 @@
 .wpcc-sponsor-logo img{
   max-height: 34px;
   width: auto;
-  max-width: 150px;
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
   display: block;
 }
