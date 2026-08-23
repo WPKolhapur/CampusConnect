@@ -368,15 +368,15 @@
 
 
     /*----------SPONSOR TICKETS-----------------*/
-    .wpcc-ticket{  
-        padding: 20px;
-  background: #ffffff;
-  color: #171777;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 14px 34px rgba(23,23,119,0.14);
-  transition: transform 0.28s ease;
-  padding: 0 !important;
+.wpcc-ticket{  
+width: 100% !important;
+height: 100% !important;
+object-fit: contain !important;
+background-color: #ffffff !important;
+padding-left: 20px !important;
+padding-right: 20px !important;
+box-shadow: rgba(0, 0, 0, 0.15) 0 2px 8px !important;
+border-radius: 10px !important;
 }
 .wpcc-ticket:hover{
   transform: translateY(-8px) rotate(-1deg);
