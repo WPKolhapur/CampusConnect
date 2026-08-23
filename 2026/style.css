@@ -368,13 +368,7 @@
 
 
     /*----------SPONSOR TICKETS-----------------*/
-    .wpcc-ticket{
-
-        width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;        
+    .wpcc-ticket{        
   background: #ffffff;
   color: #171777;
   border-radius: 16px;
