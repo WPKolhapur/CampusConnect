@@ -368,33 +368,42 @@
 
 
     /*----------SPONSOR TICKETS-----------------*/
-.wpcc-ticket{  
-width: 100% !important;
-height: 100% !important;
-object-fit: contain !important;
-background-color: #ffffff !important;
-padding-left: 20px !important;
-padding-right: 20px !important;
-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 8px !important;
-border-radius: 10px !important;
+/* ==== WPCC Sponsor Logo Card — single card only ==== */
+
+.wpcc-sponsor-card{
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(23,23,119,0.10);
+  padding: 34px 40px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-.wpcc-ticket:hover{
-  transform: translateY(-8px) rotate(-1deg);
+.wpcc-sponsor-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 16px 34px rgba(23,23,119,0.16);
 }
 
-
-.wpcc-ticket-perf::before,
-.wpcc-ticket-perf::after{
-  content: "";
-  position: absolute;
-  top: -11px;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--wpcc-page-bg);
+.wpcc-sponsor-logo{
+  margin: 0 !important;
 }
-.wpcc-ticket-perf::before{ left: -33px; }
-.wpcc-ticket-perf::after{ right: -33px; }
+.wpcc-sponsor-logo img{
+  max-height: 34px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 600px){
+  .wpcc-sponsor-card{
+    padding: 26px 30px !important;
+  }
+  .wpcc-sponsor-logo img{
+    max-height: 28px;
+  }
+}
  
         /*----------SPONSOR TICKETS End----------------*/
 
