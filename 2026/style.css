@@ -368,6 +368,16 @@
 
 
     /*----------SPONSOR TICKETS-----------------*/
+
+
+    img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image
+Specificity: (0,3,1)
+ {
+    border-radius: 0px !important;
+}
+
+
+    
 /* ==== WPCC Sponsor Logo Card — single card only ==== */
 img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image
 Specificity: (0,3,1)
