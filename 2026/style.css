@@ -12,6 +12,49 @@
     max-width: none;
 }
 
+.wp-block-column > .wp-block-group.wp-container-core-group-is-layout-df823cf3 {
+    border-radius: 18px !important;
+    padding: 32px !important;
+    box-shadow: 0 10px 30px rgba(23, 32, 54, 0.12) !important;
+    border: 1px solid #e5e7eb !important;
+
+    overflow: hidden;
+}
+
+/* Top accent */
+.wp-block-column > .wp-block-group.wp-container-core-group-is-layout-df823cf3::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: #2222a8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Heading */
+.wp-block-column > .wp-block-group.wp-container-core-group-is-layout-df823cf3 h3 {
+    font-size: 26px !important;
+    margin: 0 0 20px !important;
+    padding: 0 0 16px !important;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Rows */
+.wp-block-column > .wp-block-group.wp-container-core-group-is-layout-df823cf3 .wpcc-about-row {
+    margin: 0 !important;
+    padding: 15px 0 !important;
+    border-bottom: 1px solid #eeeeee;
+    line-height: 1.5;
+}
+
+/* Labels */
+.wp-block-column > .wp-block-group.wp-container-core-group-is-layout-df823cf3 .wpcc-about-row strong {
+    display: inline-block;
+    min-width: 110px;
+    color: #172036;
+
 /* ============================
    Campus Connect Card animation
    ============================ */
