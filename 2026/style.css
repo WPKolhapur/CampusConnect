@@ -375,8 +375,10 @@ Specificity: (0,3,1)
     border-radius: 0px !important;
 }
     
+
 .wpcc-sponsor-card{
-  background: #ffffff;
+  position: relative;
+  background: #fdf8ec;
   border-radius: 16px;
   box-shadow: 0 10px 26px rgba(23,23,119,0.10);
   padding: 34px 40px !important;
@@ -384,14 +386,33 @@ Specificity: (0,3,1)
   align-items: center;
   justify-content: center;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: visible !important;
 }
 .wpcc-sponsor-card:hover{
   transform: translateY(-5px);
   box-shadow: 0 16px 34px rgba(23,23,119,0.16);
 }
-
+ 
+/* punch-hole notches at the vertical middle of each side */
+.wpcc-sponsor-card::before,
+.wpcc-sponsor-card::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--wpcc-page-bg);
+  z-index: 1;
+}
+.wpcc-sponsor-card::before{ left: -11px; }
+.wpcc-sponsor-card::after{ right: -11px; }
+ 
 .wpcc-sponsor-logo{
   margin: 0 !important;
+  position: relative;
+  z-index: 2;
 }
 .wpcc-sponsor-logo img{
   max-height: 34px;
@@ -400,7 +421,7 @@ Specificity: (0,3,1)
   object-fit: contain;
   display: block;
 }
-
+ 
 @media (max-width: 600px){
   .wpcc-sponsor-card{
     padding: 26px 30px !important;
