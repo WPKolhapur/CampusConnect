@@ -439,11 +439,10 @@
 
     
 /*----------Registration Tickets----------------*/
-    /* =========================================
-   CAMP TIX / TIX TICKET PAGE STYLING
+/* =========================================
+   CAMP TIX - MAIN CONTAINER
    ========================================= */
 
-/* Main ticket container */
 #tix {
     max-width: 1100px;
     margin: 50px auto;
@@ -451,6 +450,7 @@
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
 }
 
 
@@ -486,6 +486,7 @@
 
 
 /* Table header */
+
 #tix table thead th {
     background: #f6f7fb;
     padding: 18px 20px;
@@ -498,6 +499,7 @@
 
 
 /* Table content */
+
 #tix table tbody td,
 #tix table tbody th {
     padding: 20px;
@@ -508,6 +510,7 @@
 
 
 /* Remove last border */
+
 #tix table tbody tr:last-child td,
 #tix table tbody tr:last-child th {
     border-bottom: none;
@@ -515,6 +518,7 @@
 
 
 /* Ticket name */
+
 #tix table tbody th label,
 #tix table tbody td strong,
 #tix .tix-ticket-title {
@@ -525,6 +529,7 @@
 
 
 /* Price */
+
 #tix .tix-ticket-price {
     font-size: 16px;
     font-weight: 600;
@@ -533,6 +538,7 @@
 
 
 /* Remaining quantity */
+
 #tix .tix-ticket-remaining {
     color: #64748b;
     font-size: 14px;
@@ -554,6 +560,7 @@
     color: #333;
     outline: none;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 #tix select:focus {
@@ -563,27 +570,37 @@
 
 
 /* =========================================
-   REGISTER BUTTON
+   BUTTONS - REGISTER / CLAIM TICKETS
    ========================================= */
+
+/* Main button styling */
 
 #tix input[type="submit"],
 #tix button,
 #tix .tix-submit {
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    background: #293b8f;
-    color: #ffffff;
-    border: none;
-    padding: 14px 32px;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 180px;
     min-height: 50px;
+    padding: 14px 32px !important;
+    background: #293b8f;
+    color: #ffffff !important;
+    border: none;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
+    line-height: 1.2;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
+    box-sizing: border-box;
 }
+
+
+/* Hover */
 
 #tix input[type="submit"]:hover,
 #tix button:hover,
@@ -591,6 +608,42 @@
     background: #1d2c73;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(41, 59, 143, 0.25);
+}
+
+
+/* =========================================
+   SPECIFIC CLAIM TICKETS BUTTON FIX
+   ========================================= */
+
+/* 
+   This prevents the Claim Tickets button
+   from becoming a huge full-width rectangle
+*/
+
+#tix input[value*="CLAIM"],
+#tix input[value*="Claim"],
+#tix input[value*="TICKETS"],
+#tix input[value*="Tickets"] {
+    display: inline-block !important;
+    width: auto !important;
+    min-width: 220px;
+    max-width: 280px !important;
+    height: auto !important;
+    padding: 18px 35px !important;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+/* Button wrapper - align button to right */
+
+#tix .tix-submit-wrapper,
+#tix .tix-submit-row,
+#tix .tix-submit-container,
+#tix .camptix-submit,
+#tix .camptix-submit-wrapper {
+    width: 100%;
+    text-align: right;
 }
 
 
@@ -608,6 +661,7 @@
     border-radius: 8px;
     font-size: 15px;
     transition: 0.3s ease;
+    box-sizing: border-box;
 }
 
 #tix input[type="text"]:focus,
@@ -621,7 +675,20 @@
 
 
 /* =========================================
-   MOBILE
+   CHECKBOXES & RADIO BUTTONS
+   ========================================= */
+
+#tix input[type="checkbox"],
+#tix input[type="radio"] {
+    width: auto;
+    margin-right: 6px;
+    accent-color: #293b8f;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
    ========================================= */
 
 @media (max-width: 768px) {
@@ -632,6 +699,9 @@
         border-radius: 12px;
     }
 
+
+    /* Ticket table becomes stacked */
+
     #tix table,
     #tix tbody,
     #tix tr,
@@ -639,6 +709,7 @@
     #tix th {
         display: block;
         width: 100%;
+        box-sizing: border-box;
     }
 
     #tix thead {
@@ -656,15 +727,39 @@
         border: none;
     }
 
+
+    /* Dropdown full width on mobile */
+
     #tix select {
         width: 100%;
     }
 
+
+    /* Buttons full width on mobile */
+
     #tix input[type="submit"],
-    #tix button {
-        width: 100%;
+    #tix button,
+    #tix .tix-submit {
+        display: flex !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: auto;
+    }
+
+
+    /* Align button normally */
+
+    #tix .tix-submit-wrapper,
+    #tix .tix-submit-row,
+    #tix .tix-submit-container,
+    #tix .camptix-submit,
+    #tix .camptix-submit-wrapper {
+        text-align: left;
     }
 }
+
+
+    
 /*----------Registration Ticket End----------------*/
 
 /* ============================
