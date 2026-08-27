@@ -575,6 +575,8 @@
     background: #293b8f;
     color: #ffffff;
     border: none;
+    padding: 14px 32px;
+    min-height: 50px;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
