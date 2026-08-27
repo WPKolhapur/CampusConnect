@@ -758,6 +758,16 @@
     }
 }
 
+    #tix .tix-submit input[type="submit"],
+#tix input[value*="CLAIM"],
+#tix input[value*="Claim"],
+#tix input[value*="TICKETS"],
+#tix input[value*="Tickets"] {
+    min-width: 220px !important;
+    max-width: 280px !important;
+    padding: 18px 35px !important;
+    white-space: nowrap;
+}
 
     
 /*----------Registration Ticket End----------------*/
