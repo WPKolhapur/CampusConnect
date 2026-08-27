@@ -453,6 +453,9 @@
     box-sizing: border-box;
 }
 
+#tix form .tix-column-quantity select option+option+option {
+    display: none;
+}
 
 /* =========================================
    ORGANIZER NOTE
