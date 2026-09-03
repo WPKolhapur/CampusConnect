@@ -453,7 +453,10 @@
     box-sizing: border-box;
 }
 
-#tix form .tix-column-quantity select option+option+option {
+#tix form .tix-column-quantity select option+option+option,
+.tix-row-question-privacy .tix-right br+label,
+.tix-row-question-allergy .tix-right label:first-child,
+.tix-row-question-accommodations .tix-right label:first-child {
     display: none;
 }
 
